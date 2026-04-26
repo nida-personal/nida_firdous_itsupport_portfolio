@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nida Firdous | IT Support Specialist | Help Desk | Technical Support | Ontario</title>
+<meta name="description" content="Nida Firdous - IT Support Specialist with 3+ years enterprise IT experience including user support, Active Directory, Windows, Linux, ticketing systems, and troubleshooting. Cambridge, ON. Valid PGWP. No sponsorship required. Available immediately.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink: #111827;
+  --navy: #0f2744;
+  --teal: #0d6e6e;
+  --teal-light: #e0f4f4;
+  --teal-mid: #0d9488;
+  --mist: #f8fafc;
+  --white: #ffffff;
+  --rule: #e2e8f0;
+  --muted: #64748b;
+  --green: #15803d;
+  --green-bg: #dcfce7;
+  --amber: #92400e;
+  --amber-bg: #fef3c7;
+  --sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  background: var(--mist);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* NAV */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--navy);
+  padding: 0 32px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 56px;
+}
+.nav-brand { font-size: 15px; font-weight: 700; color: white; text-decoration: none; letter-spacing: 0.3px; }
+.nav-links { display: flex; gap: 4px; align-items: center; }
+.nav-links a {
+  font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.7);
+  text-decoration: none; padding: 6px 12px; border-radius: 6px;
+  transition: background 0.15s, color 0.15s;
+}
+.nav-links a:hover { background: rgba(255,255,255,0.1); color: white; }
+.nav-links .nav-cta {
+  background: var(--teal-mid); color: white; font-weight: 600;
+  border-radius: 6px; margin-left: 4px;
+}
+.nav-links .nav-cta:hover { background: #0d6e6e; }
+
+/* HERO */
+.hero {
+  background: var(--navy);
+  color: white;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 440px;
+}
+.hero-left {
+  padding: 64px 48px 64px 48px;
+  display: flex; flex-direction: column; justify-content: center;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  color: #5eead4; margin-bottom: 18px;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #5eead4;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+.hero h1 {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700; line-height: 1.15; margin-bottom: 10px;
+}
+.hero-role {
+  font-size: 16px; color: #94a3b8; margin-bottom: 24px; font-weight: 400;
+}
+.hero-desc {
+  font-size: 14px; color: #cbd5e1; line-height: 1.75; margin-bottom: 32px;
+  max-width: 420px;
+}
+.hero-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn {
+  display: inline-block; font-size: 14px; font-weight: 600;
+  padding: 11px 22px; border-radius: 8px; text-decoration: none;
+  transition: all 0.18s; letter-spacing: 0.2px;
+}
+.btn-teal { background: var(--teal-mid); color: white; }
+.btn-teal:hover { background: #0d6e6e; }
+.btn-ghost { background: transparent; color: white; border: 1.5px solid rgba(255,255,255,0.3); }
+.btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.6); }
+
+/* HERO RIGHT — key facts grid */
+.hero-right {
+  padding: 48px 40px;
+  display: flex; flex-direction: column; justify-content: center; gap: 14px;
+}
+.fact-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 16px 20px;
+  display: flex; align-items: flex-start; gap: 14px;
+}
+.fact-icon {
+  width: 38px; height: 38px; border-radius: 8px;
+  background: rgba(13,148,136,0.2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 17px; flex-shrink: 0;
+}
+.fact-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #94a3b8; text-transform: uppercase; margin-bottom: 3px; }
+.fact-value { font-size: 14px; font-weight: 600; color: white; line-height: 1.4; }
+.fact-sub { font-size: 12px; color: #94a3b8; margin-top: 2px; }
+
+/* WRAP / LAYOUT */
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 60px 0; background: var(--white); }
+.section.alt { background: var(--mist); }
+.section-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--teal-mid); margin-bottom: 8px;
+}
+.section-title {
+  font-size: 26px; font-weight: 700; color: var(--navy); margin-bottom: 32px;
+}
+
+/* SKILLS FOR HELP DESK */
+.skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.skill-col { display: flex; flex-direction: column; gap: 8px; }
+.skill-col-title {
+  font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--teal); padding-bottom: 8px;
+  border-bottom: 2px solid var(--teal-light);
+  margin-bottom: 4px;
+}
+.skill-tag {
+  font-size: 13px; font-weight: 500;
+  background: var(--mist); border: 1px solid var(--rule);
+  color: var(--navy); padding: 6px 10px;
+  border-radius: 6px; line-height: 1.3;
+}
+.skill-tag.core {
+  background: var(--teal-light);
+  border-color: #99d6d6;
+  color: var(--teal);
+  font-weight: 600;
+}
+
+/* WHAT I CAN DO section */
+.helpdesk-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.hd-card {
+  border: 1px solid var(--rule); border-radius: 12px;
+  padding: 22px; background: var(--white);
+  border-left: 4px solid var(--teal-mid);
+}
+.hd-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.hd-card ul { list-style: none; padding: 0; }
+.hd-card ul li {
+  font-size: 13px; color: var(--muted); padding: 4px 0 4px 18px;
+  position: relative; line-height: 1.55; border-bottom: 1px solid var(--rule);
+}
+.hd-card ul li:last-child { border-bottom: none; }
+.hd-card ul li::before {
+  content: ''; position: absolute; left: 0; top: 11px;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--teal-mid);
+}
+
+/* EXPERIENCE */
+.exp-item { padding: 28px 0; border-bottom: 1px solid var(--rule); }
+.exp-item:last-child { border-bottom: none; }
+.exp-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 20px; margin-bottom: 6px;
+}
+.exp-title { font-size: 16px; font-weight: 700; color: var(--navy); }
+.exp-co { font-size: 14px; color: var(--teal); font-weight: 600; margin-bottom: 4px; }
+.exp-dates { font-size: 12px; color: var(--muted); font-weight: 500; white-space: nowrap; text-align: right; padding-top: 3px; }
+.exp-bullets { list-style: none; margin-top: 12px; }
+.exp-bullets li {
+  font-size: 14px; color: var(--muted); line-height: 1.6;
+  padding: 4px 0 4px 18px; position: relative; margin-bottom: 4px;
+}
+.exp-bullets li::before {
+  content: ''; position: absolute; left: 0; top: 12px;
+  width: 5px; height: 5px; border-radius: 50%; background: var(--teal-mid);
+}
+.exp-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
+.exp-tag {
+  font-size: 11px; font-weight: 700; background: var(--teal-light);
+  color: var(--teal); padding: 3px 9px; border-radius: 4px;
+}
+
+/* PROOF NUMBERS */
+.proof-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 36px; }
+.proof-card {
+  background: var(--navy); border-radius: 10px; padding: 22px 18px; text-align: center;
+}
+.proof-num { font-size: 30px; font-weight: 700; color: #5eead4; display: block; margin-bottom: 4px; line-height: 1; }
+.proof-label { font-size: 12px; color: #94a3b8; line-height: 1.4; }
+
+/* AWARDS */
+.awards-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.award-card {
+  background: var(--amber-bg); border: 1px solid #fcd34d;
+  border-radius: 10px; padding: 16px; text-align: center;
+}
+.award-yr { font-size: 11px; font-weight: 700; color: var(--amber); letter-spacing: 1px; margin-bottom: 6px; }
+.award-name { font-size: 12px; font-weight: 600; color: #78350f; line-height: 1.4; }
+
+/* EDUCATION */
+.edu-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.edu-card {
+  border: 1px solid var(--rule); border-radius: 10px; padding: 20px;
+  background: var(--white);
+}
+.edu-degree { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+.edu-school { font-size: 13px; color: var(--teal); font-weight: 600; margin-bottom: 6px; }
+.edu-meta { font-size: 12px; color: var(--muted); }
+.gpa { display: inline-block; background: var(--green-bg); color: var(--green); font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-top: 8px; }
+
+/* CERTS */
+.certs-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.cert-card {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--white); border: 1px solid var(--rule);
+  border-radius: 8px; padding: 12px 16px;
+}
+.cert-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal-mid); flex-shrink: 0; }
+.cert-dot.pending { background: #f59e0b; }
+.cert-name { font-size: 13px; font-weight: 600; color: var(--navy); }
+.cert-status { font-size: 11px; color: var(--muted); margin-top: 1px; }
+
+/* CTA BANNER */
+.cta-banner {
+  background: var(--navy); border-radius: 12px;
+  padding: 32px 36px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; flex-wrap: wrap;
+}
+.cta-left h3 { font-size: 20px; font-weight: 700; color: white; margin-bottom: 6px; }
+.cta-left p { font-size: 14px; color: #94a3b8; line-height: 1.6; }
+.cta-items { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; }
+.cta-item { font-size: 13px; }
+.cta-item strong { color: white; display: block; font-size: 12px; margin-bottom: 1px; }
+.cta-item span { color: #94a3b8; }
+.cta-btns { display: flex; gap: 10px; flex-shrink: 0; flex-wrap: wrap; }
+
+footer {
+  background: var(--navy); border-top: 1px solid rgba(255,255,255,0.08);
+  text-align: center; padding: 20px;
+  font-size: 12px; color: #64748b;
+}
+
+/* REVEAL */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+@media (max-width: 820px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .skills-grid { grid-template-columns: 1fr 1fr; }
+  .helpdesk-grid { grid-template-columns: 1fr; }
+  .proof-row { grid-template-columns: 1fr 1fr; }
+  .awards-row { grid-template-columns: 1fr 1fr; }
+  .edu-row { grid-template-columns: 1fr; }
+  .cta-banner { flex-direction: column; }
+  .nav-links a:not(.nav-cta) { display: none; }
+}
+@media (max-width: 520px) {
+  .hero-left { padding: 44px 24px; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .proof-row { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#" class="nav-brand">Nida Firdous</a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="mailto:nida.firdous@outlook.com" class="nav-cta">Contact Me</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Available Now &nbsp;|&nbsp; No Sponsorship Required</div>
+    <h1>Nida Firdous</h1>
+    <p class="hero-role">IT Support Specialist &nbsp;&bull;&nbsp; Help Desk &nbsp;&bull;&nbsp; Technical Support</p>
+    <p class="hero-desc">
+      3+ years resolving IT service requests, managing user accounts, supporting Windows and Linux environments,
+      and working with ITSM ticketing systems in a global enterprise at Tata Consultancy Services.
+      Based in Cambridge, ON. Valid PGWP. Ready to contribute from day one.
+    </p>
+    <div class="hero-btns">
+      <a href="mailto:nida.firdous@outlook.com" class="btn btn-teal">Email Me</a>
+      <a href="resume.pdf" class="btn btn-ghost">Download Resume</a>
+      <a href="https://www.linkedin.com/in/nidafirdous/" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="fact-card">
+      <div class="fact-icon">🖥️</div>
+      <div>
+        <div class="fact-label">Core Experience</div>
+        <div class="fact-value">User Support, AD, Windows &amp; Linux</div>
+        <div class="fact-sub">3+ years at Tata Consultancy Services</div>
+      </div>
+    </div>
+    <div class="fact-card">
+      <div class="fact-icon">📋</div>
+      <div>
+        <div class="fact-label">Ticketing &amp; ITSM</div>
+        <div class="fact-value">BMC Remedy, HPSM, Change Management</div>
+        <div class="fact-sub">Daily ticket handling in enterprise environment</div>
+      </div>
+    </div>
+    <div class="fact-card">
+      <div class="fact-icon">🇨🇦</div>
+      <div>
+        <div class="fact-label">Work Authorization</div>
+        <div class="fact-value">Valid PGWP &mdash; No Sponsorship Needed</div>
+        <div class="fact-sub">Full-time anywhere in Canada</div>
+      </div>
+    </div>
+    <div class="fact-card">
+      <div class="fact-icon">📍</div>
+      <div>
+        <div class="fact-label">Location</div>
+        <div class="fact-value">Cambridge, ON</div>
+        <div class="fact-sub">Open to GTA, KW Region, Remote</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- PROOF NUMBERS -->
+<div style="background:var(--navy); padding: 32px 0;" id="about">
+  <div class="wrap">
+    <div class="proof-row">
+      <div class="proof-card">
+        <span class="proof-num">3+</span>
+        <span class="proof-label">Years Enterprise IT Experience</span>
+      </div>
+      <div class="proof-card">
+        <span class="proof-num">60&ndash;80%</span>
+        <span class="proof-label">Faster User Request Resolution</span>
+      </div>
+      <div class="proof-card">
+        <span class="proof-num">4</span>
+        <span class="proof-label">TCS Recognition Awards</span>
+      </div>
+      <div class="proof-card">
+        <span class="proof-num">Day 1</span>
+        <span class="proof-label">Available to Start</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<section class="section" id="skills">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="section-label">Technical Skills</div>
+      <div class="section-title">What I Work With</div>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="skill-col">
+        <div class="skill-col-title">User Support</div>
+        <span class="skill-tag core">Active Directory</span>
+        <span class="skill-tag core">User Provisioning</span>
+        <span class="skill-tag core">Password Resets</span>
+        <span class="skill-tag core">Access Management</span>
+        <span class="skill-tag">M365 / MS Teams</span>
+        <span class="skill-tag">Group Share Folders</span>
+        <span class="skill-tag">Account De-provisioning</span>
+      </div>
+      <div class="skill-col">
+        <div class="skill-col-title">Systems &amp; OS</div>
+        <span class="skill-tag core">Windows 10/11</span>
+        <span class="skill-tag core">Linux (Ubuntu, RHEL)</span>
+        <span class="skill-tag core">Windows Server</span>
+        <span class="skill-tag">LDAP Authentication</span>
+        <span class="skill-tag">System Monitoring</span>
+        <span class="skill-tag">Splunk Log Analysis</span>
+        <span class="skill-tag">Remote Administration</span>
+      </div>
+      <div class="skill-col">
+        <div class="skill-col-title">Ticketing &amp; ITSM</div>
+        <span class="skill-tag core">BMC Remedy</span>
+        <span class="skill-tag core">HPSM</span>
+        <span class="skill-tag core">Incident Management</span>
+        <span class="skill-tag">Change Management</span>
+        <span class="skill-tag">SLA Compliance</span>
+        <span class="skill-tag">Service Request Handling</span>
+        <span class="skill-tag">Documentation</span>
+      </div>
+      <div class="skill-col">
+        <div class="skill-col-title">Tools &amp; Process</div>
+        <span class="skill-tag core">Troubleshooting</span>
+        <span class="skill-tag core">Root Cause Analysis</span>
+        <span class="skill-tag">Python Scripting</span>
+        <span class="skill-tag">Bash Scripting</span>
+        <span class="skill-tag">REST APIs</span>
+        <span class="skill-tag">Agile / Scrum</span>
+        <span class="skill-tag">Technical Documentation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT I CAN DO -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="section-label">Day-to-Day Capability</div>
+      <div class="section-title">What I Can Handle for Your Team</div>
+    </div>
+    <div class="helpdesk-grid reveal">
+      <div class="hd-card">
+        <h3>User Account Management</h3>
+        <ul>
+          <li>Create, modify, and disable user accounts in Active Directory</li>
+          <li>Manage AD group memberships and LDAP access configurations</li>
+          <li>Handle password resets, account unlocks, and access requests</li>
+          <li>Provision and de-provision M365, MS Teams, and group share access</li>
+          <li>Manage user lifecycle from onboarding through offboarding</li>
+        </ul>
+      </div>
+      <div class="hd-card">
+        <h3>Incident Handling &amp; Troubleshooting</h3>
+        <ul>
+          <li>Diagnose and resolve Windows and Linux system issues methodically</li>
+          <li>Triage and prioritize incoming tickets based on business impact</li>
+          <li>Perform root cause analysis and document resolution steps</li>
+          <li>Escalate complex issues clearly with full context to senior teams</li>
+          <li>Follow up with users to confirm issue resolution and satisfaction</li>
+        </ul>
+      </div>
+      <div class="hd-card">
+        <h3>ITSM &amp; Ticketing</h3>
+        <ul>
+          <li>Log, track, and resolve service requests in BMC Remedy and HPSM</li>
+          <li>Manage change request workflows from creation through closure</li>
+          <li>Meet SLA targets through organized, systematic queue management</li>
+          <li>Write clear knowledge base articles and resolution documentation</li>
+          <li>Generate reports and track recurring incidents for trend analysis</li>
+        </ul>
+      </div>
+      <div class="hd-card">
+        <h3>System Monitoring &amp; Administration</h3>
+        <ul>
+          <li>Monitor system health and service availability using Splunk</li>
+          <li>Deploy and configure agents across Windows and Linux servers</li>
+          <li>Identify and escalate anomalies before they become user-facing issues</li>
+          <li>Support server patching, configuration updates, and maintenance tasks</li>
+          <li>Maintain accurate records of system configurations and changes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="section-label">Career History</div>
+      <div class="section-title">Professional Experience</div>
+    </div>
+
+    <div class="reveal">
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-title">Systems Engineer &mdash; IT Operations &amp; User Support</div>
+            <div class="exp-co">Tata Consultancy Services (TCS) &mdash; Hyderabad, India</div>
+          </div>
+          <div class="exp-dates">Nov 2020 &ndash; Jan 2024<br><span style="font-size:11px;">3 years 2 months</span></div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Resolved IT service requests for user access provisioning, password resets, M365 migration, MS Teams access, and group share folder creation, reducing average resolution time by 60 to 80 percent.</li>
+          <li>Administered Active Directory user accounts, AD group memberships, and LDAP authentication configurations, ensuring correct access for hundreds of enterprise users across multiple systems.</li>
+          <li>Managed full user lifecycle including onboarding provisioning and post-termination de-provisioning across AD groups and SQL databases, eliminating unauthorized access risks after employee exits.</li>
+          <li>Handled IT service requests through ITSM ticketing platforms (BMC Remedy, HPSM), managing the full lifecycle from logging through resolution and closure in line with SLA requirements.</li>
+          <li>Diagnosed and resolved infrastructure incidents including system configuration failures, authentication errors, and server monitoring gaps through systematic root cause analysis.</li>
+          <li>Deployed server monitoring agents across Windows and Linux nodes, ensuring 24/7 visibility into system health and enabling proactive incident response before end users were impacted.</li>
+          <li>Collaborated with cross-functional global teams in Agile environment to deliver IT operations improvements, documenting solutions clearly to build team knowledge base.</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag">Active Directory</span>
+          <span class="exp-tag">Windows Server</span>
+          <span class="exp-tag">Linux</span>
+          <span class="exp-tag">BMC Remedy</span>
+          <span class="exp-tag">HPSM</span>
+          <span class="exp-tag">User Provisioning</span>
+          <span class="exp-tag">M365</span>
+          <span class="exp-tag">Splunk</span>
+          <span class="exp-tag">ITSM</span>
+          <span class="exp-tag">Incident Management</span>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-title">Embedded Systems Projects</div>
+            <div class="exp-co">Conestoga College &mdash; Cambridge, ON</div>
+          </div>
+          <div class="exp-dates">Jan 2024 &ndash; Apr 2025</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Built and deployed Linux-based Python applications on Raspberry Pi with full system integration, debugging, and testing discipline — reinforcing practical Linux and scripting skills relevant to IT support environments.</li>
+          <li>Maintained detailed project documentation and performed systematic end-to-end testing, demonstrating the methodical approach and attention to accuracy that IT support roles require.</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag">Linux</span>
+          <span class="exp-tag">Python</span>
+          <span class="exp-tag">Troubleshooting</span>
+          <span class="exp-tag">Documentation</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:36px;" class="reveal">
+      <div style="font-size:13px; font-weight:700; color:var(--navy); margin-bottom:14px;">TCS Recognition</div>
+      <div class="awards-row">
+        <div class="award-card"><div class="award-yr">2023</div><div class="award-name">Contextual Master Award</div></div>
+        <div class="award-card"><div class="award-yr">2022</div><div class="award-name">Contextual Master Story Published</div></div>
+        <div class="award-card"><div class="award-yr">2021</div><div class="award-name">Best Team Award</div></div>
+        <div class="award-card"><div class="award-yr">2020</div><div class="award-name">Star Performer Award</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION & CERTS -->
+<section class="section alt" id="education">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="section-label">Education &amp; Certifications</div>
+      <div class="section-title">Academic Background</div>
+    </div>
+    <div class="edu-row reveal">
+      <div class="edu-card">
+        <div class="edu-degree">Post Graduate Certificate</div>
+        <div class="edu-school">Embedded Systems Development</div>
+        <div class="edu-meta">Conestoga College, Cambridge, ON &bull; April 2025</div>
+        <div class="gpa">GPA 3.85 / 4.0</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-degree">Bachelor of Technology</div>
+        <div class="edu-school">Electronics &amp; Communications Engineering</div>
+        <div class="edu-meta">JNTU Hyderabad, India &bull; May 2018</div>
+        <div class="gpa">GPA 3.60 / 4.0</div>
+      </div>
+    </div>
+    <div style="margin-top:28px;" class="reveal">
+      <div style="font-size:13px; font-weight:700; color:var(--navy); margin-bottom:14px;">Certifications</div>
+      <div class="certs-row">
+        <div class="cert-card">
+          <div class="cert-dot"></div>
+          <div><div class="cert-name">IBM IT Fundamentals</div><div class="cert-status">Completed 2026</div></div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-dot pending"></div>
+          <div><div class="cert-name">CompTIA A+</div><div class="cert-status">Expected 2026</div></div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-dot pending"></div>
+          <div><div class="cert-name">AWS Cloud Practitioner</div><div class="cert-status">In Progress</div></div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-dot"></div>
+          <div><div class="cert-name">Python &mdash; HackerRank</div><div class="cert-status">Verified</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AVAILABILITY CTA -->
+<section class="section">
+  <div class="wrap">
+    <div class="cta-banner reveal">
+      <div class="cta-left">
+        <h3>Ready to contribute from day one</h3>
+        <p>I bring real enterprise IT support experience, familiarity with the tools your team already uses,<br>and the reliability of someone who has delivered results in a high-volume global IT environment.</p>
+        <div class="cta-items">
+          <div class="cta-item"><strong>Location</strong><span>Cambridge, ON &mdash; GTA, KW, Remote</span></div>
+          <div class="cta-item"><strong>Authorization</strong><span>Valid PGWP, no sponsorship needed</span></div>
+          <div class="cta-item"><strong>Availability</strong><span>Immediate start</span></div>
+          <div class="cta-item"><strong>Open to</strong><span>Full-time &bull; Contract &bull; Hybrid &bull; Remote</span></div>
+        </div>
+      </div>
+      <div class="cta-btns">
+        <a href="mailto:nida.firdous@outlook.com" class="btn btn-teal">Email Me</a>
+        <a href="https://www.linkedin.com/in/nidafirdous/" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="resume.pdf" class="btn btn-ghost">Resume</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Nida Firdous &nbsp;&bull;&nbsp; nida.firdous@outlook.com &nbsp;&bull;&nbsp; +1 (437) 766 3201 &nbsp;&bull;&nbsp; Cambridge, ON
+</footer>
+
+<script>
+const els = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.06 });
+els.forEach(el => io.observe(el));
+</script>
+</body>
+</html>
